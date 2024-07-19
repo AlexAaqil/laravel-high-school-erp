@@ -1,0 +1,8 @@
+REQUIREMENTS:
+1. Report forms.
+2. School fees.
+3. Discipline.
+        - Minor and Major disciplinaries with ability for teachers to leave a comment about the indiscipline.
+4. Leave outs.
+        - should notify parents when a student is issued with a leave out.
+5. Textbook issues.
