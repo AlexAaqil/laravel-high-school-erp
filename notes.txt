@@ -54,3 +54,13 @@ subjects {
     title
 }
 
+
+
+#########################################################################
+Repos:
+- https://github.com/4jean/lav_sms?tab=readme-ov
+- https://github.com/changeweb/Unifiedtransform
+- https://github.com/hrshadhin/school-management-system
+- https://github.com/francoisjacquet/rosariosis
+- https://github.com/yungifez/skuul
+- https://github.com/parvez-git/laravel-school-management-system
