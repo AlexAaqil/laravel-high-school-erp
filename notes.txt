@@ -1,0 +1,41 @@
+Registrar
+can add students.
+
+
+
+students
+can be enrolled for more than one subject.
+
+
+
+Teacher
+can add students marks for each subject (generate report forms).
+can add major and minor disciplinaries as well as comment about the disciplinary.
+can issue leave outs (parents get notified when a student is issued with a leave out).
+can hand out text books.
+ 
+
+
+Accountant
+can update school fees records for students.
+
+
+
+#########################################################################
+
+
+
+student {
+    registration_number
+    name
+}
+
+classes {
+    class_name
+    class_teacher (nullable)
+}
+
+subjects {
+    title
+}
+
