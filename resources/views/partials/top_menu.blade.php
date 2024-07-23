@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-md navbar-dark">
     <div class="mt-2 mr-5">
         <a href="{{ route('dashboard') }}" class="d-inline-block">
-        <h4 class="text-bold text-white">{{ Qs::getSystemName() }}</h4>
+        <h4 class="text-bold text-white">{{ env('APP_SHORT_NAME') }}</h4>
         </a>
     </div>
   {{--  <div class="navbar-brand">
@@ -26,8 +26,6 @@
                     <i class="icon-paragraph-justify3"></i>
                 </a>
             </li>
-
-
         </ul>
 
 			<span class="navbar-text ml-md-3 mr-md-auto"></span>
