@@ -1,4 +1,6 @@
-TODOs
+#########################################################################
+TODOs:
+
 # authentication - add user levels and permissions like 0 (super admin), 1 (admins), 2 (users) and 3 (blogger).
 # profile - users should be able to update profile pictures.
 # Logs - keeps logs on when users logged in and what they did when they logged in.
@@ -11,9 +13,83 @@ authentication - ensure only active users can login.
 
 
 
+#########################################################################
+REQUIREMENTS:
+
+1. Report forms.
+2. School fees.
+3. Discipline.
+        - Minor and Major disciplinaries with ability for teachers to leave a comment about the indiscipline.
+4. Leave outs.
+        - should notify parents when a student is issued with a leave out.
+5. Textbook issues.
 
 
-NOTES
-User levels:
-0 - admin
-1 - user
+
+#########################################################################
+USER STORIES:
+
+Registrar
+can add students.
+
+
+
+students
+can be enrolled for more than one subject.
+
+
+
+Teacher
+can add students marks for each subject (generate report forms).
+can add major and minor disciplinaries as well as comment about the disciplinary.
+can issue leave outs (parents get notified when a student is issued with a leave out).
+can hand out text books.
+ 
+
+
+Accountant
+can update school fees records for students.
+
+
+
+#########################################################################
+DATABASE:
+
+student {
+    registration_number
+    name
+}
+
+classes {
+    class_name
+    class_teacher (nullable)
+}
+
+subjects {
+    title
+}
+
+
+
+#########################################################################
+REPOS:
+
+- https://github.com/4jean/lav_sms?tab=readme-ov
+- https://github.com/changeweb/Unifiedtransform
+- https://github.com/hrshadhin/school-management-system
+- https://github.com/francoisjacquet/rosariosis
+- https://github.com/yungifez/skuul
+- https://github.com/parvez-git/laravel-school-management-system
+
+
+
+#########################################################################
+NOTES:
+
+User levels {
+    0 : super_admin
+    1 : admin
+    2 : student
+    3 : parent
+    4 : teacher
+}
