@@ -17,16 +17,18 @@ class UsersSeeder extends Seeder
             [
                 "first_name" => "Admin",
                 "last_name" => "Administrator",
+                "username" => "admin",
                 "email" => "admin@gmail.com",
-                "phone_number" => "254746055487",
+                "phone_main" => "254746055487",
                 "password"=> Hash::make("@dmin"),
                 "user_level" => 0,
             ],
             [
                 "first_name" => "User",
                 "last_name" => "Test",
+                "username" => "user",
                 "email" => "user@gmail.com",
-                "phone_number" => "254746055487",
+                "phone_main" => "254746055487",
                 "password"=> Hash::make("p@ssword"),
             ],
         ];
