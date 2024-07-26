@@ -7,6 +7,12 @@
         <form action="{{ route('blogs.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
+            <div class="input_group">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image" />
+                <span class="inline_alert">{{ $errors->first('image') }}</span>
+            </div>
+
             <div class="row_input_group_3">
                 <div class="input_group">
                     <label for="first_name">First Name</label>
@@ -61,6 +67,31 @@
                     <input type="date" name="dob" id="dob" :value="old('dob')">
                 </div>
             </div>
+
+            <div class="row_input_group">
+                <div class="input_group">
+                    <label for="gender">Gender</label>
+                    <div class="custom_radio_buttons">
+                        <label>
+                            <input class="option_radio" type="radio" name="gender" id="male" value="M" {{ old('gender', 'M') == 'M' ? 'checked' : '' }}>
+                            <span>Male</span>
+                        </label>
+
+                        <label>
+                            <input class="option_radio" type="radio" name="gender" id="female" value="F" {{ old('gender') == 'female' ? 'checked' : '' }}>
+                            <span>Female</span>
+                        </label>
+                    </div>
+                    <span class="inline_alert">{{ $errors->first('gender') }}</span>
+                </div>
+
+                <div class="input_group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" :value="old('address')">
+                </div>
+            </div>
+
+            <button type="submit">Save</button>
         </form>
     </div>
 
