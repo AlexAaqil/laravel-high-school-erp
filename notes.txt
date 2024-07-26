@@ -72,8 +72,15 @@ users {
 }
 
 student {
+    user_id
     registration_number
-    name
+    dorm_room_number
+    year_admitted
+    graduation_date
+
+    parent_id
+    dorm_id
+    class_id
 }
 
 classes {
