@@ -10,7 +10,7 @@
             $nav_links = [
                 // ['route' => 'about', 'text' => 'About'],
                 // ['route' => 'services', 'text' => 'Services'],
-                ['route' => 'contact', 'text' => 'Contact'],
+                // ['route' => 'contact', 'text' => 'Contact'],
                 // ['route' => 'users.blogs', 'text' => 'Blogs'],
             ];
         @endphp
@@ -34,10 +34,10 @@
                 <a href="{{ route('profile.edit') }}" class="profile">
                     <i class="fa fa-user"></i>
                 </a>
-    
+
                 <form action="{{ route('logout') }}" method="post">
                     @csrf
-    
+
                     <button type="submit" class="logout_btn">Logout</button>
                 </form>
             </div>

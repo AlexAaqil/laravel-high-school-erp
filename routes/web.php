@@ -9,7 +9,8 @@ use App\Http\Controllers\UserMessageController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 
-Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
+// Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
+Route::view('/', 'auth.login')->name('home');
 Route::get('/about', [GeneralPagesController::class, 'about'])->name('about');
 Route::get('/services', [GeneralPagesController::class, 'services'])->name('services');
 Route::get('/contact', [GeneralPagesController::class, 'contact'])->name('contact');
@@ -20,7 +21,7 @@ Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show')
 Route::middleware(['auth', 'verified', 'active'])->group(function () {
     Route::get('/home', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-    
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
