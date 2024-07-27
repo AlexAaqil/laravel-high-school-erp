@@ -9,12 +9,42 @@
                 <i class="fas fa-users"></i>
             </div>
             <div class="text">
-                <span>{{ $count_users }}</span>
-                <a href="{{ route('users.index') }}">Users</a>
+                <span>4000</span>
+                <a href="{{ route('users.index') }}">Admins</a>
             </div>
         </div>
 
-        {{-- <div class="stat">
+        <div class="stat">
+            <div class="icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="text">
+                <span>4000</span>
+                <a href="{{ route('users.index') }}">Students</a>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="text">
+                <span>4000</span>
+                <a href="{{ route('users.index') }}">Teachers</a>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="text">
+                <span>4000</span>
+                <a href="{{ route('users.index') }}">Parents</a>
+            </div>
+        </div>
+
+        <div class="stat">
             <div class="icon">
                 <i class="fas fa-blog"></i>
             </div>
@@ -22,7 +52,7 @@
                 <span>{{ $count_blogs }}</span>
                 <a href="{{ route('blogs.index') }}">Blogs</a>
             </div>
-        </div> --}}
+        </div>
 
         <div class="stat">
             <div class="icon">
