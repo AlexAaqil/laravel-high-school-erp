@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules;
 use App\Models\User;
 
 class UserController extends Controller
@@ -17,6 +18,31 @@ class UserController extends Controller
     public function create()
     {
         return view('admin.users.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'user_level' => ['required'],
+            'first_name' => ['required', 'string', 'max:80'],
+            'last_name' => ['required', 'string', 'max:120'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'phone_main' => ['required', 'max:30'],
+            'password' => ['required', Rules\Password::defaults()],
+        ]);
+
+        $user = User::create([
+            'user_level' => $request->user_level,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number,
+            'password' => Hash::make($request->password),
+        ]);
+
+        Mail::to($user->email)->send(new WelcomeEmail($user));
+
+        return redirect(route('users.index', absolute: false));
     }
 
     public function edit(User $user)
