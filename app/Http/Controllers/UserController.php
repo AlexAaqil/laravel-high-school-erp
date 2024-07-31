@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeEmail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use App\Models\User;
 
@@ -36,7 +39,7 @@ class UserController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'phone_number' => $request->phone_number,
+            'phone_main' => $request->phone_main,
             'password' => Hash::make($request->password),
         ]);
 
