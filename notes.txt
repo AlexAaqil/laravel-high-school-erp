@@ -82,20 +82,22 @@ users {
 }
 
 student {
-    user_id
     registration_number
     dorm_room_number
     year_admitted
+    graduation_status (default : 0)
     graduation_date
 
-    parent_id
-    dorm_id
+    user_id
     class_id
+    dorm_id
+    parent_id
 }
 
 staff {
     emp_code
     emp_date
+    user_id
 }
 
 classes {
@@ -103,8 +105,16 @@ classes {
     class_teacher (nullable)
 }
 
+dorms {
+    dorm_name
+    description
+}
+
 subjects {
     title
+
+    class_id
+    teacher_id
 }
 
 payments {
