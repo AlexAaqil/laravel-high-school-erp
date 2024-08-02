@@ -136,6 +136,7 @@ REPOS:
 - https://github.com/francoisjacquet/rosariosis
 - https://github.com/yungifez/skuul
 - https://github.com/parvez-git/laravel-school-management-system
+- http://www.campcodes.com/projects/php/school-management-system-in-php/
 
 
 
