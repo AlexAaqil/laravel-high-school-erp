@@ -26,6 +26,31 @@ REQUIREMENTS:
 
 
 
+TEACHERS PORTAL
+- can update student exam marks.
+- can view all classes performance.
+- can view student discipline records.
+- can view text books issued.
+- can view student leaveouts.
+- can issue leaveout forms.
+
+
+
+STUDENT PORTAL
+- can view their report forms.
+- can view their school fees statement.
+- can view their discipline records.
+- can view text books issued.
+- can view leaveout history.
+- can view teachers statement and remarks.
+
+
+
+PARENTS PORTAL
+- can send messages to teachers by getting contact information from their end.
+
+
+
 #########################################################################
 USER STORIES:
 
