@@ -6,11 +6,26 @@ TODOs:
 # Logs - keeps logs on when users logged in and what they did when they logged in.
 # signup | contact - use proper phone number inputs with country codes.
 
-admin - search functionality.
-users - edit functionality.
-navbar - solve error for pages without the burger menu.
-authentication - ensure only active users can login.
+AUTH
+- ensure only active users can login.
 
+
+DASHBOARD
+
+
+ADMIN
+- search functionality.
+
+
+USERS
+
+
+STUDENTS
+- admin a student.
+
+
+PAYMENTS
+- accountant can select class to view students and payments.
 
 
 #########################################################################
@@ -93,20 +108,26 @@ DATABASE:
 users {
     first_name
     last_name
-    username
     email
     phone_main
     phone_other
-    password
-    user_level
-    user_status
     dob
     gender
     image
     address
 }
 
-student {
+staff {
+    username
+    password
+    user_level
+    user_status
+    emp_code
+    emp_date
+    user_id
+}
+
+students {
     registration_number
     dorm_room_number
     year_admitted
@@ -119,9 +140,7 @@ student {
     parent_id
 }
 
-staff {
-    emp_code
-    emp_date
+parents {
     user_id
 }
 
@@ -143,13 +162,33 @@ subjects {
 }
 
 payments {
+    reference_number
     title (eg. School Fees)
     class
-    payment_method
+    method
     amount
     description
 }
 
+disciplinaries {
+    student_id
+    teacher_id
+    category (minor or major)
+    description
+}
+
+text_books {
+    student_id
+    teacher_id
+    book_title
+    reference_number
+}
+
+leave_outs {
+    student_id
+    teacher_id
+
+}
 
 
 #########################################################################
