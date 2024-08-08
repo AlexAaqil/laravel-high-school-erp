@@ -8,12 +8,14 @@ TODOs:
 
 AUTH
 - ensure only active users can login.
+- users can login with either their email or username
 
 
 DASHBOARD
 
 
 ADMIN
+- can add users according to their user level.
 - search functionality.
 
 
@@ -68,6 +70,11 @@ PARENTS PORTAL
 
 #########################################################################
 USER STORIES:
+
+Admin
+- can add users according to their user level.
+- can enter basic setting for the school.
+
 
 Registrar
 can add students.
@@ -146,7 +153,13 @@ parents {
 
 classes {
     class_name
-    class_teacher (nullable)
+}
+
+class_sections {
+    secton_name
+
+    class_id
+    teacher_id
 }
 
 dorms {
@@ -188,6 +201,17 @@ leave_outs {
     student_id
     teacher_id
 
+}
+
+settings {
+    school_name
+    school_acronym
+    phone
+    email
+    address
+    this_term_begins
+    this_term_ends
+    current_session
 }
 
 

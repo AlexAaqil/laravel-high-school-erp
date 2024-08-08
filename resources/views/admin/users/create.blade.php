@@ -12,8 +12,10 @@
                     <label for="user_level">User Level</label>
                     <select name="user_level" id="user_level">
                         <option value="">User Level</option>
-                        <option value="accountant">Accountant</option>
                         <option value="admin">Admin</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="accountant">Accountant</option>
+                        <option value="parent">Parent</option>
                     </select>
                     <span class="inline_alert">{{ $errors->first('user_level') }}</span>
                 </div>
