@@ -8,6 +8,7 @@
             $navLinks = [
                 ['route' => 'admin.dashboard', 'icon' => 'fas fa-home', 'text' => 'Dashboard'],
                 ['route' => 'users.index', 'icon' => 'fas fa-users', 'text' => 'Users'],
+                ['route' => 'settings.edit', 'icon' => 'fas fa-settings', 'text' => 'Settings'],
                 // ['route' => 'blogs.index', 'icon' => 'fas fa-blog', 'text' => 'Blogs'],
                 ['route' => 'user-messages.index', 'icon' => 'fas fa-comment', 'text' => 'Messages'],
             ];

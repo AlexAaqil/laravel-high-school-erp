@@ -27,7 +27,7 @@
             </div>
 
             <div class="input_group">
-                <label for="email">Phone Number</label>
+                <label for="email">Email</label>
                 <input type="emil" name="email" value="{{ old('email') }}" placeholder="Phone Number">
                 <span class="inline_alert">{{ $errors->first('email') }}</span>
             </div>

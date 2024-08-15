@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserMessageController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SchoolSettingsController;
 
 // Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
 Route::view('/', 'auth.login')->name('home');
@@ -41,10 +42,12 @@ Route::middleware(['auth', 'verified', 'active', 'admin'])
     Route::patch('/users/{user}', [UserController::class, 'update'])->name('user.update');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
+    Route::get('/settings', [SchoolSettingsController::class, 'edit'])->name('settings.edit');
+    Route::patch('/settings', [SchoolSettingsController::class, 'update'])->name('settings.update');
+
     Route::resource('user-messages', UserMessageController::class)->only('index', 'show', 'destroy');
 
     Route::resource('/blog-categories', BlogCategoryController::class)->only('store', 'edit', 'update', 'destroy');
-
     Route::resource('/blogs', BlogController::class)->except('show');
     Route::post('/blogs/sort-lessons', [BlogController::class, 'sort_blogs'])->name('blogs.sort');
 });

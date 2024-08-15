@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Storage;
 
 class SchoolSettingsController extends Controller
 {
+    public function edit()
+    {
+        return view('admin.settings.edit');
+    }
+
     public function update(Request $request)
     {
         // Validate the request data
