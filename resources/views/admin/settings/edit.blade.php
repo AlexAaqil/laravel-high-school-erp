@@ -22,13 +22,13 @@
 
             <div class="input_group">
                 <label for="phone">Phone Number</label>
-                <input type="text" name="phone" value="{{ old('phone') }}" placeholder="Phone Number">
+                <input type="text" name="phone" value="{{ old('phone') }}" placeholder="+254 746 055 487">
                 <span class="inline_alert">{{ $errors->first('phone') }}</span>
             </div>
 
             <div class="input_group">
                 <label for="email">Email</label>
-                <input type="emil" name="email" value="{{ old('email') }}" placeholder="Phone Number">
+                <input type="emil" name="email" value="{{ old('email') }}" placeholder="aaqilhighschool@gmail.com">
                 <span class="inline_alert">{{ $errors->first('email') }}</span>
             </div>
 
@@ -38,10 +38,18 @@
                 <span class="inline_alert">{{ $errors->first('address') }}</span>
             </div>
 
-            <div class="input_group">
-                <label for="next_term_fees">Next Term Fees</label>
-                <input type="text" name="next_term_fees" value="{{ old('next_term_fees') }}" placeholder="Ksh. 50,000.00">
-                <span class="inline_alert">{{ $errors->first('next_term_fees') }}</span>
+            <div class="row_input_group">
+                <div class="input_group">
+                    <label for="this_terms_begins">This Term Begins</label>
+                    <input type="date" name="this_terms_begins" value="{{ old('this_terms_begins') }}">
+                    <span class="inline_alert">{{ $errors->first('this_terms_begins') }}</span>
+                </div>
+    
+                <div class="input_group">
+                    <label for="this_terms_ends">This Term Begins</label>
+                    <input type="date" name="this_terms_ends" value="{{ old('this_terms_ends') }}">
+                    <span class="inline_alert">{{ $errors->first('this_terms_ends') }}</span>
+                </div>
             </div>
 
             <button type="submit">Update</button>
