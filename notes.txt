@@ -72,40 +72,39 @@ PARENTS PORTAL
 USER STORIES:
 
 Admin
-- can add users according to their user level.
+- can add classes and sections for classes.
+- can add dorms.
 - can enter basic setting for the school.
-
-
-Registrar
-can add students.
+- can add students to the system.
+- can add users according to their user level.
 
 
 
 students
-can be enrolled for more than one subject.
-can view time tables.
-can view their results and fee structure.
+- can be enrolled for more than one subject.
+- can view time tables.
+- can view their results and fee structure.
 
 
 
 Teacher
-can add students marks for each subject (generate report forms).
-can add major and minor disciplinaries as well as comment about the disciplinary.
-can issue leave outs (parents get notified when a student is issued with a leave out).
-can hand out text books.
-can view time tables.
-can view all students information.
+- can add students marks for each subject (generate report forms).
+- can add major and minor disciplinaries as well as comment about the disciplinary.
+- can issue leave outs (parents get notified when a student is issued with a leave out).
+- can hand out text books.
+- can view time tables.
+- can view all students information.
 
 
 
 Accountant
-can update school fees records for students.
+- can update school fees records for students.
 
 
 
 Parent
-can view their child's information.
-can view results and fee structures.
+- can view their child's information.
+- can view results and fee structures.
 
 
 
@@ -115,9 +114,6 @@ DATABASE:
 users {
     first_name
     last_name
-    email
-    phone_main
-    phone_other
     dob
     gender
     image
@@ -126,6 +122,9 @@ users {
 
 staff {
     username
+    email
+    phone_main
+    phone_other
     password
     user_level
     user_status
@@ -148,6 +147,10 @@ students {
 }
 
 parents {
+    email
+    phone_main
+    phone_other
+
     user_id
 }
 
@@ -164,7 +167,6 @@ class_sections {
 
 dorms {
     dorm_name
-    description
 }
 
 subjects {
@@ -211,7 +213,6 @@ settings {
     address
     this_term_begins
     this_term_ends
-    current_session
 }
 
 
