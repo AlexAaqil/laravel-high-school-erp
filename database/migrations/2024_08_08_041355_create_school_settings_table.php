@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('school_acronym');
             $table->string('phone');
             $table->string('email');
-            $table->address('address');
+            $table->string('address');
             $table->string('this_term_begins');
             $table->string('this_term_ends');
             $table->timestamps();
