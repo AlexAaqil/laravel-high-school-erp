@@ -9,7 +9,7 @@ class ClassesController extends Controller
 {
     public function index()
     {
-        $classes = Classes::latest()->get();
+        $classes = Classes::get();
         return view('admin.classes.classes.index', compact('classes'));
     }
 
@@ -36,7 +36,7 @@ class ClassesController extends Controller
 
     public function edit(Classes $classes)
     {
-        //
+        return view('admin.classes.classes.edit', compact('classes'));
     }
 
     public function update(Request $request, Classes $classes)
@@ -52,6 +52,8 @@ class ClassesController extends Controller
 
     public function destroy(Classes $classes)
     {
-        //
+        $classes->delete();
+
+        return redirect()->route('classes.index')->with('success', ['message' => 'Class has been deleted.']);
     }
 }

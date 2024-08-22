@@ -43,7 +43,13 @@ Route::middleware(['auth', 'verified', 'active', 'admin'])
     Route::patch('/users/{user}', [UserController::class, 'update'])->name('user.update');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
-    Route::resource('/classes', ClassesController::class);
+    Route::get('/classes', [ClassesController::class, 'index'])->name('classes.index');
+    Route::get('/classes/create', [ClassesController::class, 'create'])->name('classes.create');
+    Route::post('/classes', [ClassesController::class, 'store'])->name('classes.store');
+    Route::get('/classes/{classes}', [ClassesController::class, 'show'])->name('classes.show');
+    Route::get('/classes/{classes}/edit', [ClassesController::class, 'edit'])->name('classes.edit');
+    Route::patch('/classes/{classes}', [ClassesController::class, 'update'])->name('classes.update');
+    Route::delete('/classes/{classes}', [ClassesController::class, 'destroy'])->name('classes.destroy');
 
     Route::get('/settings', [SchoolSettingsController::class, 'edit'])->name('settings.edit');
     Route::patch('/settings', [SchoolSettingsController::class, 'update'])->name('settings.update');

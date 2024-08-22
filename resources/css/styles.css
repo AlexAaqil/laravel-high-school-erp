@@ -440,6 +440,10 @@ a.btn {
   border-radius: 50%;
 }
 
+.delete_form {
+  margin: 1.5em 0;
+}
+
 @media screen and (width >= 726px) {
   .custom_form .row_input_group,
   .custom_form .row_input_group_3 {

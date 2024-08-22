@@ -20,7 +20,7 @@
                     @foreach($classes as $class)
                         <tr class="searchable">
                             <td class="center">
-                                <a href="{{ route('classes.show', ['class' => $class->id]) }}">
+                                <a href="{{ route('classes.edit', $class->id) }}">
                                     {{ $id++ }}
                                 </a>
                             </td>
