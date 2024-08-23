@@ -443,6 +443,11 @@ a.btn {
 .another_form {
   margin: 1.5em 0;
 }
+.another_form .mini_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0 1em;
+}
 
 @media screen and (width >= 726px) {
   .custom_form .row_input_group,

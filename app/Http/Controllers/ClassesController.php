@@ -9,7 +9,7 @@ class ClassesController extends Controller
 {
     public function index()
     {
-        $classes = Classes::get();
+        $classes = Classes::orderBy('class_name')->get();
         return view('admin.classes.classes.index', compact('classes'));
     }
 

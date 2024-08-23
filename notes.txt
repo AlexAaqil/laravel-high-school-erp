@@ -111,6 +111,21 @@ Parent
 #########################################################################
 DATABASE:
 
+user fields {
+    first_name
+    last_name
+    dob
+    gender
+    image
+    address
+
+    username
+    email
+    password
+    phone_main
+    phone_other
+}
+
 users {
     first_name
     last_name
@@ -118,14 +133,11 @@ users {
     gender
     image
     address
+    username
+    email
 }
 
 staff {
-    username
-    email
-    phone_main
-    phone_other
-    password
     user_level
     user_status
     emp_code
@@ -147,10 +159,6 @@ students {
 }
 
 parents {
-    email
-    phone_main
-    phone_other
-
     user_id
 }
 

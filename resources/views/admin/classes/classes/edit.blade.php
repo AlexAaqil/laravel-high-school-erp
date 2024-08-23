@@ -14,24 +14,49 @@
                 <span class="inline_alert">{{ $errors->first('class_name') }}</span>
             </div>
 
-            <button type="submit">Update</button>
-        </form>
+            <div class="buttons">
+                <button type="submit">Update</button>
 
-        <div class="another_form">
-            <form id="deleteForm_{{ $classes->id }}" action="{{ route('classes.destroy', $classes->id) }}" method="post">
-                @csrf
-                @method('DELETE')
-
-                <p>Delete this Class</p>
-                <button type="button" class="delete_btn" onclick="deleteItem({{ $classes->id }}, 'class');">
+                <button type="button" class="delete_btn" onclick="deleteItem({{ $classes->id }}, 'class');" form="deleteForm_{{ $classes->id }}">
                     <i class="fas fa-trash-alt delete"></i>
                     <span>Delete</span>
                 </button>
-            </form>
-        </div>
+            </div>
+        </form>
 
-        <div class="container">
+        <form id="deleteForm_{{ $classes->id }}" action="{{ route('classes.destroy', $classes->id) }}" method="post" style="display: none;">
+            @csrf
+            @method('DELETE')
+        </form>
 
+        <div class="class_sections another_form">
+            <div class="heading_section">
+                <p>Class Sections</p>
+                <form action="">
+                    <input type="hidden" name="class_id" id="class_id" value="{{ $classes->id }}">
+                    
+                    <div class="row_input_group_3">
+                        <div class="input_group">
+                            <input type="text" name="title" id="title" placeholder="Class Section Name">
+                        </div>
+
+                        <div class="input_grout">
+                            <select name="teacher_id" id="teacher_id">
+                                <option value="">Select Class Teacher</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">New</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="sections">
+                <p>
+                    <span>Section - </span>
+                    <span>Class teacher</span>
+                </p>
+            </div>
         </div>
     </div>
 
