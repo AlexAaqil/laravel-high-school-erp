@@ -17,7 +17,7 @@
             <button type="submit">Update</button>
         </form>
 
-        <div class="delete_form">
+        <div class="another_form">
             <form id="deleteForm_{{ $classes->id }}" action="{{ route('classes.destroy', $classes->id) }}" method="post">
                 @csrf
                 @method('DELETE')
@@ -28,6 +28,10 @@
                     <span>Delete</span>
                 </button>
             </form>
+        </div>
+
+        <div class="container">
+
         </div>
     </div>
 
