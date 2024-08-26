@@ -32,12 +32,15 @@
         <div class="class_sections another_form">
             <div class="heading_section">
                 <p>Class Sections</p>
-                <form action="">
+                <form action="{{ route('class_sections.store') }}" method="post">
+                    @csrf
+
                     <input type="hidden" name="class_id" id="class_id" value="{{ $classes->id }}">
-                    
+
                     <div class="row_input_group_3">
                         <div class="input_group">
-                            <input type="text" name="title" id="title" placeholder="Class Section Name">
+                            <input type="text" name="title" id="title" value="{{ old('title') }}" placeholder="Class Section Name">
+                            <span class="inline_alert">{{ $errors->first('title') }}</span>
                         </div>
 
                         <div class="input_grout">
@@ -52,10 +55,16 @@
             </div>
 
             <div class="sections">
-                <p>
-                    <span>Section - </span>
-                    <span>Class teacher</span>
-                </p>
+                @if(count($class_sections) > 0)
+                    @foreach($class_sections as $class_section)
+                        <p>
+                            <span>{{ $class_section->title }} - </span>
+                            <span>{{ $class_section->teacher_id ?? 'Teacher is unknown' }}</span>
+                        </p>
+                    @endforeach
+                @else
+                    <p>No class section added yet</p>
+                @endif
             </div>
         </div>
     </div>

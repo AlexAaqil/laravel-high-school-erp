@@ -9,6 +9,7 @@ use App\Http\Controllers\UserMessageController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClassesController;
+use App\Http\Controllers\ClassSectionsController;
 use App\Http\Controllers\SchoolSettingsController;
 
 // Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
@@ -50,6 +51,8 @@ Route::middleware(['auth', 'verified', 'active', 'admin'])
     Route::get('/classes/{classes}/edit', [ClassesController::class, 'edit'])->name('classes.edit');
     Route::patch('/classes/{classes}', [ClassesController::class, 'update'])->name('classes.update');
     Route::delete('/classes/{classes}', [ClassesController::class, 'destroy'])->name('classes.destroy');
+
+    Route::resource('class_sections', ClassSectionsController::class);
 
     Route::get('/settings', [SchoolSettingsController::class, 'edit'])->name('settings.edit');
     Route::patch('/settings', [SchoolSettingsController::class, 'update'])->name('settings.update');

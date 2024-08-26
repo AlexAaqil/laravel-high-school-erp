@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Classes;
+use App\Models\ClassSections;
 use Illuminate\Http\Request;
 
 class ClassesController extends Controller
@@ -36,7 +37,8 @@ class ClassesController extends Controller
 
     public function edit(Classes $classes)
     {
-        return view('admin.classes.classes.edit', compact('classes'));
+        $class_sections = ClassSections::get();
+        return view('admin.classes.classes.edit', compact('classes', 'class_sections'));
     }
 
     public function update(Request $request, Classes $classes)

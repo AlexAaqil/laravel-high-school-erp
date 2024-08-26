@@ -9,7 +9,7 @@
 
             <div class="input_group">
                 <label for="class_name">Name of the class</label>
-                <input type="text" name="class_name" id="class_name" placeholder="1 North" value="{{ old('class_name') }}">
+                <input type="text" name="class_name" id="class_name" placeholder="Form 1" value="{{ old('class_name') }}">
                 <span class="inline_alert">{{ $errors->first('class_name') }}</span>
             </div>
 
