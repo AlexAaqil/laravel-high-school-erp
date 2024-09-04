@@ -118,12 +118,13 @@ user fields {
     gender
     image
     address
-
-    username
-    email
-    password
+    user_type
     phone_main
     phone_other
+
+    user_level
+    email
+    password
 }
 
 users {
@@ -133,11 +134,12 @@ users {
     gender
     image
     address
-    username
-    email
+    user_type
 }
 
 staff {
+    username
+    email
     user_level
     user_status
     emp_code
