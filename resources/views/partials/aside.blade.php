@@ -9,7 +9,7 @@
                 ['route' => 'admin.dashboard', 'icon' => 'fas fa-home', 'text' => 'Dashboard'],
                 ['route' => 'users.index', 'icon' => 'fas fa-users', 'text' => 'Users'],
                 ['route' => 'classes.index', 'icon' => 'fas fa-chalkboard', 'text' => 'Classes'],
-                ['route' => 'users.index', 'icon' => 'fas fa-house-user', 'text' => 'Dorms'],
+                // ['route' => 'users.index', 'icon' => 'fas fa-house-user', 'text' => 'Dorms'],
                 ['route' => 'settings.edit', 'icon' => 'fas fa-cogs', 'text' => 'Settings'],
                 // ['route' => 'blogs.index', 'icon' => 'fas fa-blog', 'text' => 'Blogs'],
                 ['route' => 'user-messages.index', 'icon' => 'fas fa-comment', 'text' => 'Messages'],
