@@ -49,8 +49,8 @@
                 <i class="fas fa-blog"></i>
             </div>
             <div class="text">
-                <span>{{ $count_blogs }}</span>
-                <a href="{{ route('blogs.index') }}">Blogs</a>
+                <span>{{ $count_classes }}</span>
+                <a href="{{ route('classes.index') }}">Classes</a>
             </div>
         </div>
 
