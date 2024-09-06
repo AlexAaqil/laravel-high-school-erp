@@ -27,6 +27,8 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->string('image')->nullable();
             $table->string('address')->nullable();
+            $table->string('emp_code')->nullable();
+            $table->date('emp_date')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
