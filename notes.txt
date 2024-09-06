@@ -111,57 +111,57 @@ Parent
 #########################################################################
 DATABASE:
 
-user fields {
-    first_name
-    last_name
-    dob
-    gender
-    image
-    address
-    user_type
-    phone_main
-    phone_other
-
-    user_level
-    email
-    password
-}
-
 users {
     first_name
     last_name
+    username
     dob
     gender
     image
     address
-    user_type
-}
+    phone_main
+    phone_other
 
-staff {
-    username
     email
+    password
     user_level
     user_status
     emp_code
     emp_date
-    user_id
 }
 
 students {
+    first_name
+    last_name
+    dob
+    gender
+    image
+    address
+    phone_main
+    phone_other
+
+    password
     registration_number
     dorm_room_number
     year_admitted
     graduation_status (default : 0)
     graduation_date
 
-    user_id
     class_id
     dorm_id
     parent_id
 }
 
 parents {
-    user_id
+    first_name
+    last_name
+    dob
+    gender
+    image
+    address
+    phone_main
+    phone_other
+    email
 }
 
 classes {
@@ -242,11 +242,9 @@ REPOS:
 #########################################################################
 NOTES:
 
-User levels {
+User_levels {
     0 : super_admin
     1 : admin
-    2 : student
+    2 : accountant
     3 : teacher
-    4 : accountant
-    5 : parent
 }
