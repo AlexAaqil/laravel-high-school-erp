@@ -12,10 +12,9 @@
                     <label for="user_level">User Level</label>
                     <select name="user_level" id="user_level">
                         <option value="">User Level</option>
-                        <option value="super_admin">Super Admin</option>
-                        <option value="admin">Admin</option>
-                        <option value="teacher">Teacher</option>
-                        <option value="accountant">Accountant</option>
+                        @foreach($user_levels as $user_level)
+                            <option value="{{ $user_level->user_level }}">{{ $user_level->description }}</option>
+                        @endforeach
                     </select>
                     <span class="inline_alert">{{ $errors->first('user_level') }}</span>
                 </div>
@@ -50,7 +49,7 @@
             <div class="row_input_group_3">
                 <div class="input_group">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" value="hs123456">
                     <span class="inline_alert">{{ $errors->first('password') }}</span>
                 </div>
             </div>

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use App\Models\User;
+use App\Models\UserLevels;
 
 class UserController extends Controller
 {
@@ -20,7 +21,8 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('admin.users.create');
+        $user_levels = UserLevels::get();
+        return view('admin.users.create', compact('user_levels'));
     }
 
     public function store(Request $request)
