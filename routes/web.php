@@ -11,6 +11,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\ClassSectionsController;
 use App\Http\Controllers\SchoolSettingsController;
+use App\Http\Controllers\StudentsController;
 
 // Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
 Route::view('/', 'auth.login')->name('home');
@@ -43,6 +44,8 @@ Route::middleware(['auth', 'verified', 'active', 'admin'])
     Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('user.edit');
     Route::patch('/users/{user}', [UserController::class, 'update'])->name('user.update');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+    Route::resource('students', StudentsController::class);
 
     Route::get('/classes', [ClassesController::class, 'index'])->name('classes.index');
     Route::get('/classes/create', [ClassesController::class, 'create'])->name('classes.create');

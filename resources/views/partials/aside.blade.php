@@ -8,6 +8,7 @@
             $navLinks = [
                 ['route' => 'admin.dashboard', 'icon' => 'fas fa-home', 'text' => 'Dashboard'],
                 ['route' => 'users.index', 'icon' => 'fas fa-users', 'text' => 'Users'],
+                ['route' => 'students.index', 'icon' => 'fas fa-users', 'text' => 'Students'],
                 ['route' => 'classes.index', 'icon' => 'fas fa-chalkboard', 'text' => 'Classes'],
                 // ['route' => 'users.index', 'icon' => 'fas fa-house-user', 'text' => 'Dorms'],
                 ['route' => 'settings.edit', 'icon' => 'fas fa-cogs', 'text' => 'Settings'],
