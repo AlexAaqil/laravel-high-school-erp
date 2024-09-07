@@ -134,22 +134,22 @@ students {
     first_name
     last_name
     dob
-    gender
-    image
-    address
+    -gender
+    -image
+    -address
     phone_main
     phone_other
 
     password
     registration_number
-    dorm_room_number
-    year_admitted
-    graduation_status (default : 0)
-    graduation_date
+    -dorm_room_number
+    -year_admitted
+    -graduation_status (default : 0)
+    -graduation_date
 
-    class_id
-    dorm_id
-    parent_id
+    -class_id
+    -dorm_id
+    -parent_id
 }
 
 parents {
