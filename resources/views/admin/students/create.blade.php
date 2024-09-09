@@ -6,7 +6,7 @@
 
         <form action="{{ route('students.store') }}" method="post" enctype="multipart/form-data">
             @csrf
-            <input type="text" name="gender" value="M">
+            <input type="hidden" name="gender" value="M">
 
             <div class="row_input_group_3">
                 <div class="input_group">
@@ -48,7 +48,69 @@
                 </div>
             </div>
 
-            .row_input 
+            <div class="row_input_group_3">
+                <div class="input_group">
+                    <label for="dorm_room_number">Dorm Room Number</label>
+                    <input type="text" name="dorm_room_number" id="dorm_room_number" value="{{ old('dorm_room_number') }}">
+                    <span class="inline_alert">{{ $errors->first('dorm_room_number') }}</span>
+                </div>
+            </div>
+
+            <div class="row_input_group_3">
+                <div class="input_group">
+                    <label for="year_admitted">Year Admitted</label>
+                    <input type="number" id="year_admitted" name="year_admitted" min="2000" max="2060" step="1" value="{{ old('year_admitted') }}">
+                    <span class="inline_alert">{{ $errors->first('year_admitted') }}</span>
+                </div>
+
+                <div class="input_group">
+                    <label for="graduation_status">Graduation Status?</label>
+                    <div class="custom_radio_buttons">
+                        <label>
+                            <input class="option_radio" type="radio" name="graduation_status" id="yes" value="1" {{ old('graduation_status') == '1' ? 'checked' : '' }}>
+                            <span>Graduated</span>
+                        </label>
+
+                        <label>
+                            <input class="option_radio" type="radio" name="graduation_status" id="no" value="0" {{ old('graduation_status', 0) == '0' ? 'checked' : '' }}>
+                            <span>Not</span>
+                        </label>
+                    </div>
+                    <span class="inline_alert">{{ $errors->first('graduation_status') }}</span>
+                </div>
+
+                <div class="input_group">
+                    <label for="graduation_date">Graudation Date</label>
+                    <input type="year" id="graduation_date" name="graduation_date" value="{{ old('graduation_date') }}">
+                    <span class="inline_alert">{{ $errors->first('graduation_date') }}</span>
+                </div>
+            </div>
+
+            <div class="row_input_group_3">
+                <div class="input_group">
+                    <label for="class_id">Class</label>
+                    <select name="class_id" id="class_id">
+                        <option value="">Select Class</option>
+                        <option value="">xxx</option>
+                    </select>
+                </div>
+
+                <div class="input_group">
+                    <label for="class_id">Dorm</label>
+                    <select name="dorm_id" id="dorm_id">
+                        <option value="">Select Dorm</option>
+                        <option value="">xxx</option>
+                    </select>
+                </div>
+
+                <div class="input_group">
+                    <label for="class_id">Parent</label>
+                    <select name="parent_id" id="parent_id">
+                        <option value="">Select Parent</option>
+                        <option value="">xxx</option>
+                    </select>
+                </div>
+            </div>
 
             <div class="row_input_group_3">
                 <div class="input_group">

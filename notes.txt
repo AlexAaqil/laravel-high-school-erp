@@ -142,14 +142,14 @@ students {
 
     password
     registration_number
-    -dorm_room_number
-    -year_admitted
-    -graduation_status (default : 0)
-    -graduation_date
+    dorm_room_number
+    year_admitted
+    graduation_status (default : 0)
+    graduation_date
 
-    -class_id
-    -dorm_id
-    -parent_id
+    class_id
+    dorm_id
+    parent_id
 }
 
 parents {
