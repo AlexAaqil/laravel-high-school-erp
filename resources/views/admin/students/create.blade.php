@@ -6,6 +6,7 @@
 
         <form action="{{ route('students.store') }}" method="post" enctype="multipart/form-data">
             @csrf
+            <input type="text" name="gender" value="M">
 
             <div class="row_input_group_3">
                 <div class="input_group">
@@ -46,6 +47,8 @@
                     <span class="inline_alert">{{ $errors->first('phone_main') }}</span>
                 </div>
             </div>
+
+            .row_input 
 
             <div class="row_input_group_3">
                 <div class="input_group">

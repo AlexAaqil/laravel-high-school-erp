@@ -134,9 +134,9 @@ students {
     first_name
     last_name
     dob
-    -gender
+    gender
     -image
-    -address
+    address
     phone_main
     phone_other
 
