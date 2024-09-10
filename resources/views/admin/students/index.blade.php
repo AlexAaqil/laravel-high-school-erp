@@ -11,7 +11,7 @@
                 <th class="center">ID</th>
                 <th>Reg No.</th>
                 <th>Name</th>
-                <th>Phone Number</th>
+                <th>Class</th>
             </thead>
 
             <tbody>
@@ -20,13 +20,13 @@
                     @foreach($students as $student)
                     <tr class="searchable">
                         <td class="center">
-                            <a href="{{ route('user.edit', ['user' => $user->id]) }}">
+                            <a href="{{ route('students.edit', ['student' => $student->id]) }}">
                                 {{ $id++ }}
                             </a>
                         </td>
-                        <td>{{ $user->registration_number }}</td>
-                        <td>{{ $user->first_name .' '. Auth::user()->last_name }}</td>
-                        <td>+{{ $user->phone_main }}</td>
+                        <td>{{ $student->registration_number }}</td>
+                        <td>{{ $student->first_name .' '. Auth::user()->last_name }}</td>
+                        <td>{{ $student->student_class->title }}</td>
                     </tr>
                     @endforeach
                 @else

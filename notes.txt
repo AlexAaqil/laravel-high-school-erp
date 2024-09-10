@@ -147,7 +147,7 @@ students {
     graduation_status (default : 0)
     graduation_date
 
-    class_id
+    class_section_id
     dorm_id
     parent_id
 }
@@ -169,7 +169,7 @@ classes {
 }
 
 class_sections {
-    secton_name
+    title
 
     class_id
     teacher_id
