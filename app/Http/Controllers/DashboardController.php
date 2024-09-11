@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\UserMessage;
 use App\Models\Blog;
 use App\Models\ClassSections;
+use App\Models\Students;
 
 class DashboardController extends Controller
 {
@@ -38,12 +39,14 @@ class DashboardController extends Controller
         $count_user_messages = UserMessage::count();
         $count_blogs = Blog::count();
         $count_classes = ClassSections::count();
+        $count_students = Students::count();
 
         return view('admin.dashboard', compact(
             'count_users',
             'count_user_messages',
             'count_blogs',
             'count_classes',
+            'count_students',
         ));
     }
 }

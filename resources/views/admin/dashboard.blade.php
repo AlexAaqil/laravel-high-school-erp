@@ -19,7 +19,7 @@
                 <i class="fas fa-users"></i>
             </div>
             <div class="text">
-                <span>4000</span>
+                <span>{{ $count_students }}</span>
                 <a href="{{ route('users.index') }}">Students</a>
             </div>
         </div>
