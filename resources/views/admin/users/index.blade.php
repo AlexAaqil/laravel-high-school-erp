@@ -1,6 +1,6 @@
 <x-admin-layout class="Users">
-    <x-admin-header 
-        header_title="Users" 
+    <x-admin-header
+        header_title="Users"
         :total_count="count($users)"
         route="{{ route('users.create') }}"
     />
@@ -12,6 +12,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
+                <th>User type</th>
             </thead>
 
             <tbody>
@@ -25,11 +26,12 @@
                             </a>
                         </td>
                         <td>
-                            {{ $user->first_name .' '. Auth::user()->last_name }} 
+                            {{ $user->first_name .' '. Auth::user()->last_name }}
                             {!! $user->user_level == 0 ? '<span class="td_span">admin</span>' : '' !!}
                         </td>
                         <td class="{{ $user->email_verified_at != Null ? 'verified' : 'unverified'  }}">{{ $user->email }}</td>
                         <td>+{{ $user->phone_main }}</td>
+                        <td>user_level</td>
                     </tr>
                     @endforeach
                 @else
