@@ -9,7 +9,7 @@
                 <i class="fas fa-users"></i>
             </div>
             <div class="text">
-                <span>4000</span>
+                <span>{{ $count_admins }}</span>
                 <a href="{{ route('users.index') }}">Admins</a>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <i class="fas fa-users"></i>
             </div>
             <div class="text">
-                <span>4000</span>
+                <span>{{ $count_teachers }}</span>
                 <a href="{{ route('users.index') }}">Teachers</a>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 <i class="fas fa-users"></i>
             </div>
             <div class="text">
-                <span>4000</span>
+                <span>{{ $count_parents }}</span>
                 <a href="{{ route('users.index') }}">Parents</a>
             </div>
         </div>
