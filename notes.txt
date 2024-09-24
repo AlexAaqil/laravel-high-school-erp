@@ -1,5 +1,7 @@
 #########################################################################
 TODOs:
+# add a helper function to translate the user levels.
+
 
 # authentication - add user levels and permissions like 0 (super admin), 1 (admins), 2 (users) and 3 (blogger).
 # profile - users should be able to update profile pictures.
