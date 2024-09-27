@@ -188,6 +188,21 @@ subjects {
     teacher_id
 }
 
+exams {
+    exam_name
+    date
+
+    class_id
+}
+
+exam_marks {
+    student_id
+    exam_id
+    marks
+
+    exam_id
+}
+
 payments {
     reference_number
     title (eg. School Fees)
@@ -195,26 +210,43 @@ payments {
     method
     amount
     description
+    status
+    due_date
 }
 
 disciplinaries {
+    category (ENUM: 'minor', 'major')
+    description
+    date
+
     student_id
     teacher_id
-    category (minor or major)
-    description
 }
 
 text_books {
+    title
+    author
+    reference_number
+
+    class_id
+}
+
+text_book_issues {
+    issue_date
+    return_date
+
+    textbool_id
     student_id
     teacher_id
-    book_title
-    reference_number
 }
 
 leave_outs {
+    notification_sent (boolean)
+    issue_date
+    return_date
+
     student_id
     teacher_id
-
 }
 
 settings {
